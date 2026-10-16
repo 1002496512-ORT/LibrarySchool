@@ -1,38 +1,39 @@
 ﻿using Tests.DTO;
 using System.Collections.Generic;
+using System.Collections;
+using System.Threading.Tasks;
+using System.Threading;
+using System.Security.Cryptography;
+using System;
+using System.Diagnostics;
+using System.ComponentModel.DataAnnotations;
 namespace Tests
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static  void Main(string[] args)
         {
-            List<Student> students = new List<Student>();
-
-            Console.WriteLine("Insert Age");
-            int age = int.Parse(Console.ReadLine());
-            Student student = new Student
-            {
-                Age = age,
-                Id = "123456789",
-                Name = "Alex"
-            };
-            students.Add(student);
-            students.Add(
-                new Student
-                {
-                    Age = 16,
-                    Id = "23543654",
-                    Name = "Roni"
-                }
-            );
-
-            foreach(Student st in students)
-            {
-                Console.WriteLine(st.Name);
-            }
-
             Console.ReadLine();
-            
+
         }
+
+        public static class ValidationTester
+        {
+            public static List<ValidationResult> ValidateModel(object model)
+            {
+                var results = new List<ValidationResult>();
+                var context = new ValidationContext(model, serviceProvider: null, items: null);
+                bool isValid= Validator.TryValidateObject(model, context, results, validateAllProperties: true);
+                return results;
+            }
+  
+       
+
+       
+
+      
+
+
+
     }
 }
