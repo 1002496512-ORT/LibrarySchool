@@ -1,4 +1,4 @@
-﻿using ModelLibrary;
+﻿using LibraryDTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -7,7 +7,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LibraryModels
+namespace LibraryDTO
 {
     public class Book:Model
     {

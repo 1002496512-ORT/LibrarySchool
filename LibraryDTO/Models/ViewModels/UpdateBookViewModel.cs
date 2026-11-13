@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LibraryModels
+namespace LibraryDTO
 {
     public class UpdateBookViewModel
     {

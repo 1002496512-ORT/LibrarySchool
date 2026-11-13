@@ -1,4 +1,4 @@
-﻿using Tests.DTO;
+﻿using LibraryDTO;
 using System.Collections.Generic;
 using System.Collections;
 using System.Threading.Tasks;
@@ -8,23 +8,13 @@ using System;
 using System.Diagnostics;
 using System.ComponentModel.DataAnnotations;
 using System.Net;
-using LibraryModels;
 namespace Tests
 {
     internal class Program
     {
         static  void Main(string[] args)
         {
-            Author author = new Author
-            {
-                AuthorFirstName = "Kjfkdjk",
-                AuthorId = "1",
-                AuthorLastName = "Agfg",
-                AuthorPicture = "fgfgfj.jpg",
-                AuthorYear = 1234,
-                CountryId = 3
-            };
-            ValidateModel(author);
+            
             Console.ReadLine();
         }
             public static void ValidateModel(object model)
